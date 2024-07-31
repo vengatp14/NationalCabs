@@ -142,4 +142,114 @@
     });
   });
 
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.querySelector('.gallery');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const popup = document.querySelector('.popup');
+    const popupImg = document.querySelector('.popup-img');
+    const closeButton = document.querySelector('.close');
+    const popupPrevButton = document.querySelector('.popup-prev');
+    const popupNextButton = document.querySelector('.popup-next');
+
+    let currentIndex = 0;
+    let popupIndex = 0;
+    let autoSlideInterval;
+    const totalItems = galleryItems.length;
+
+    // Clone the gallery items and append/prepend them to create a seamless loop
+    galleryItems.forEach(item => gallery.appendChild(item.cloneNode(true)));
+    galleryItems.forEach(item => gallery.prepend(item.cloneNode(true)));
+
+    function getItemsToShow() {
+        return window.innerWidth <= 768 ? 1 : 4;
+    }
+
+    function showGalleryItem(index) {
+        const itemsToShow = getItemsToShow();
+        const offset = index * (100 / itemsToShow);
+        gallery.style.transition = 'transform 0.5s ease';
+        gallery.style.transform = `translateX(-${offset}%)`;
+
+        // Handle the infinite loop transition
+        if (index >= totalItems || index < 0) {
+            setTimeout(() => {
+                gallery.style.transition = 'none';
+                gallery.style.transform = `translateX(-${(totalItems + (index % totalItems)) * (100 / itemsToShow)}%)`;
+                currentIndex = (index % totalItems) + totalItems;
+            }, 500);
+        }
+    }
+
+    function showPopup(index) {
+        popup.style.display = 'flex';
+        popupImg.src = galleryItems[index % totalItems].querySelector('img').src;
+        popupIndex = index % totalItems;
+        clearInterval(autoSlideInterval); // Stop auto-slide when popup is open
+    }
+
+    function closePopup() {
+        popup.style.display = 'none';
+        startAutoSlide(); // Resume auto-slide when popup is closed
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex++;
+            showGalleryItem(currentIndex);
+        }, 3000); // Change image every 3 seconds
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex--;
+        showGalleryItem(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex++;
+        showGalleryItem(currentIndex);
+    });
+
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => showPopup(index));
+    });
+
+    closeButton.addEventListener('click', closePopup);
+    
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+
+    popupPrevButton.addEventListener('click', () => {
+        popupIndex = (popupIndex > 0) ? popupIndex - 1 : totalItems - 1;
+        showPopup(popupIndex);
+    });
+
+    popupNextButton.addEventListener('click', () => {
+        popupIndex = (popupIndex < totalItems - 1) ? popupIndex + 1 : 0;
+        showPopup(popupIndex);
+    });
+
+    window.addEventListener('resize', () => {
+        // Adjust the current index when resizing to ensure proper display
+        showGalleryItem(currentIndex);
+    });
+
+    // Initialize the gallery by positioning it at the middle set of items
+    gallery.style.transform = `translateX(-${totalItems * (100 / getItemsToShow())}%)`;
+    currentIndex = totalItems;
+
+    startAutoSlide(); // Start the auto-slide on page load
+});
+
+
+
+
+
+
 })();
