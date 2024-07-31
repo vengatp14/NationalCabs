@@ -2226,3 +2226,11 @@ section, .section {
   scroll-margin-top: 100px;
   overflow: clip;
 }
+
+.page-title:before {
+  content: "";
+  background-color: 
+color-mix(in srgb, #002f75c4, transparent 30%);
+  position: absolute;
+  inset: 0;
+}
