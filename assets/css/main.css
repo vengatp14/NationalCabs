@@ -280,7 +280,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(14, 29, 52, 0.9);
+  --background-color: #014d69d9;
 }
 
 /*--------------------------------------------------------------
@@ -2002,7 +2002,7 @@ section,
 	width:60px;
 	height:60px;
 	bottom: 75px;
-    right: 10px;
+    left: 10px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
@@ -2020,7 +2020,7 @@ section,
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom: 145px;
+	bottom: 75px;
     right: 10px;
 	background-color:#2542d3;
 	color:#FFF;
@@ -2185,7 +2185,8 @@ figcaption{
     font-size: 42px;
     margin: 0;
     font-weight: 700;
-    color: var(--heading-color);
+    /* color: var(--heading-color); */
+    color: #51d1ff;
 }
 }
 
@@ -2233,4 +2234,15 @@ section, .section {
 color-mix(in srgb, #002f75c4, transparent 30%);
   position: absolute;
   inset: 0;
+}
+
+.header .logo img {
+  max-height: 57px;
+  margin-right: 11px;
+  margin-top: -8px;
+}
+
+.w-fit{
+  width: fit-content;
+  font-size: 20px;
 }
