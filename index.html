@@ -50,6 +50,7 @@
 
   gtag('config', 'AW-11153331414');
 </script>
+
 </head>
 
 <body class="index-page">
@@ -766,7 +767,20 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    window.addEventListener('load', function() {
+      document.addEventListener('mousedown', function(e) {
+        if (e.target.closest('[href*="https://wa.me/"]')) {
+          gtag('event', 'conversion', {'send_to': 'AW-11153331414/sgjqCKaIjN0ZENapqcYp'});
+        }
+        if (e.target.closest('[href*="tel"]')) {
+          gtag('event', 'conversion', {'send_to': 'AW-11153331414/qrtQCJzijN0ZENapqcYp'});
+        }
+      }, {
+        capture: true
+      });
+    });
+  </script>
 </body>
 
 </html>
