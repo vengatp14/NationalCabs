@@ -911,9 +911,9 @@ section,
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 20px;
-  border: none;
+  /* border: none; */
   margin-right: 10px;
-  border: none !important;
+  /* border: none !important; */
   background: none !important;
 }
 
@@ -2254,4 +2254,22 @@ color-mix(in srgb, #002f75c4, transparent 30%);
   color: white;
   border-radius: 5px;
   box-shadow: 2px 2px blue;
+}
+
+.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
 }
