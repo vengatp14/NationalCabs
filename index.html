@@ -997,7 +997,7 @@
     event.preventDefault();
     
     let isValid = true;
-    const inputs = form.querySelectorAll('input');
+    const inputs = form.querySelectorAll('input, select');
     const mobileInput = document.getElementById('mobile');
     const mobilePattern = /^[6-9]\d{9}$/;
 
