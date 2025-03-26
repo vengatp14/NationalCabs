@@ -2273,3 +2273,43 @@ color-mix(in srgb, #002f75c4, transparent 30%);
 .was-validated :invalid {
   border-color: #dc3545;
 }
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s, box-shadow 0.5s;
+  cursor: pointer;
+}
+.destination-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.destination-card:hover img {
+  transform: scale(1.1);
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s;
+}
+.destination-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+.card-overlay h3, .card-overlay p {
+  margin: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.destination-card:hover .card-overlay h3, .destination-card:hover .card-overlay p {
+  transform: translateY(-10px);
+  opacity: 1;
+}

@@ -54,6 +54,10 @@
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-11153331414/rRLkCK75_IoZENapqcYp'});
 </script>
+<!-- Event snippet for whats app clicks conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-11153331414/sgjqCKaIjN0ZENapqcYp'});
+</script>
 
 </head>
 
@@ -93,8 +97,8 @@
       <img src="assets/img/world-dotted-map.png" alt="Affordable outstation cabs Dindigul" class="hero-bg " data-aos="fade-in">
 
       <div class="container mt-5">
-        <div class="row gy-4 d-flex justify-content-between">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <div class="row gy-4 my-5 pt-5 d-flex justify-content-between">
+          <div class="col-lg-6  justify-content-center">
             <h2 data-aos="fade-up" class="text-white">National Cabs Booking in Madurai & dindigul at Affordable Price</h2>
             <p data-aos="fade-up" data-aos-delay="100" class="text-white">Welcome to National Cabs – Your trusted partner for reliable and comfortable cab rentals in Madurai. Experience seamless travel with our well-maintained fleet and professional drivers. Book your ride today for local or outstation trips and enjoy the journey with us!</p>
 
@@ -107,70 +111,65 @@
 
           </div>
 
-          <div class="col-lg-6 mt-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <!-- <img src="assets/img/cab.png" class="img-fluid mb-3 mb-lg-0 rounded shadow-lg" alt="Outstation cab rates Dindigul"> -->
-            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation bg-light" novalidate>
+          <div class="col-md-6">
+            <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
               <input type="hidden" name="access_key" value="1daf82e9-db2e-4a02-b44a-ac9c5702e58f" />
               <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-              <input type="checkbox" name="botcheck" id="" style="display: none;" />
-    
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 form-label text-primary bold"><b>First Name</b></label>
-                  <input type="text" name="name" id="first_name" placeholder="John" required class="form-control border bg-white" />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your first name.
-                  </div>
+      
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="name" class="form-label"><b>Your Name</b></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                <div class="invalid-feedback">Please enter a valid name.</div>
+              </div>
+      
+              <!-- Pick-up and Drop Location -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="pickup" class="form-label"><b>Pick-up Location</b></label>
+                  <input type="text" id="pickup" name="pickup" class="form-control" placeholder="Pick-up Location" required>
+                  <div class="invalid-feedback">Please enter pick-up location.</div>
                 </div>
-                <div class="w-full md:w-1/2">
-                  <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 form-label text-primary bold"><b>Last Name</b></label>
-                  <input type="text" name="last_name" id="lname" placeholder="Doe" required class="form-control " />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your last name.
-                  </div>
+      
+                <div class="col-md-6 mb-3">
+                  <label for="drop" class="form-label"><b>Drop Location</b></label>
+                  <input type="text" id="drop" name="drop" class="form-control" placeholder="Drop Location" required>
+                  <div class="invalid-feedback">Please enter drop location.</div>
                 </div>
               </div>
-    
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 form-label text-primary bold"><b>Email Address</b></label>
-                  <input type="email" name="email" id="email" placeholder="you@company.com" required class=" form-control " />
-                  <div class="empty-feedback text-red-400 text-sm mt-1">
-                    Please provide your email address.
-                  </div>
-                  <div class="invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide a valid email address.
-                  </div>
-                </div>
-    
-                <div class="w-full md:w-1/2">
-                  <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400 form-label text-primary bold"><b>Phone Number</b></label>
-                  <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="form-control " />
-    
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your phone number.
-                  </div>
-                </div>
+      
+              <!-- Mobile Number -->
+              <div class="mb-3">
+                <label for="mobile" class="form-label"><b>Mobile Number</b></label>
+                <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter your mobile number" required>
+                <div class="invalid-feedback">Please enter a valid mobile number.</div>
               </div>
-              <div class="mb-6">
-                <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 form-label text-primary bold"><b>Your Message</b></label>
-    <br>
-                <textarea rows="5" name="message" id="message" placeholder="Your Message" class="form-control" required></textarea>
-                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                  Please enter your message.
+      
+              <!-- Date and Time -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="date" class="form-label"><b>Date</b></label>
+                  <input type="date" id="date" name="date" class="form-control" required>
+                  <div class="invalid-feedback">Please select a date.</div>
+                </div>
+      
+                <div class="col-md-6 mb-3">
+                  <label for="time" class="form-label"><b>Time</b></label>
+                  <input type="time" id="time" name="time" class="form-control" required>
+                  <div class="invalid-feedback">Please select a valid time.</div>
                 </div>
               </div>
-              <div class="mb-6 text-end">
-                <button type="submit" class="btn-sm mt-4 py-2  btn btn-primary">
-                  Send Message
-                </button>
+      
+              <!-- Submit Button -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success">Book Now</button>
               </div>
-              <p class="text-base text-center text-gray-400" id="result"></p>
+              
+              <div id="form-msg" class="mt-3 text-center"></div>
             </form>
           </div>
-
         </div>
-      </div>
+        </div>
 
     </section><!-- /Hero Section -->
     
@@ -421,6 +420,105 @@
   
         </section>
         <!-- /Services Section -->
+
+<!-- card section  -->
+        <section>
+          <div class="container py-5">
+            <h2 class="text-center mb-4">Explore Top Destinations</h2>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='kanyakumari.html'">
+                      <img src="./assets/img/Untitled design (4).jpg" class="img-fluid" alt="Kanyakumari">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Kanyakumari</h2>
+                          <p><b>7 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='kodaikanal.html'">
+                      <img src="./assets/img/kodai.jpg" class="img-fluid" alt="Kodaikanal">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Kodaikanal</h2>
+                          <p><b>10 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='coimbatore.html'">
+                      <img src="./assets/img/cbe.jpg" class="img-fluid" alt="Coimbatore">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Coimbatore</h2>
+                          <p><b>6 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='madurai.html'">
+                      <img src="./assets/img/pimgs.jpg" class="img-fluid" alt="Madurai">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Madurai</h2>
+                          <p><b>6 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='thiruvananthapuram.html'">
+                      <img src="./assets/img/thiruvananthapuram.jpg" class="img-fluid" alt="Thiruvananthapuram">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Thiruvananthapuram</h2>
+                          <p><b>4 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='trichy.html'">
+                      <img src="./assets/img/trichy.jpg" class="img-fluid" alt="Trichy">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Trichy</h2>
+                          <p><b>2 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='rameshwaram.html'">
+                      <img src="./assets/img/rameshwaram.jpg" class="img-fluid" alt="Rameshwaram">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Rameshwaram</h2>
+                          <p><b>9 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='ooty.html'">
+                      <img src="./assets/img/ooty.jpg" class="img-fluid" alt="Ooty">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Ooty</h2>
+                          <p><b>6 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-lg-4 col-md-6 my-3">
+                  <div class="destination-card" onclick="window.location.href='munnar.html'">
+                      <img src="./assets/img/munnar.jpg" class="img-fluid" alt="Munnar">
+                      <div class="card-overlay">
+                          <h2 class="text-white">Munnar</h2>
+                          <p><b>7 Places</b></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        </section>
+        <!-- card section  -->
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
@@ -843,6 +941,35 @@
       });
     });
   </script>
+
+<script>
+  const form = document.getElementById('booking-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    const inputs = form.querySelectorAll('input');
+    const mobileInput = document.getElementById('mobile');
+    const mobilePattern = /^[6-9]\d{9}$/;
+
+    inputs.forEach(input => {
+      if (!input.checkValidity() || (input === mobileInput && !mobilePattern.test(mobileInput.value))) {
+        input.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+      }
+    });
+
+    if (isValid) {
+      document.getElementById('form-msg').innerHTML = '<div class="alert alert-success">Form submitted successfully!</div>';
+      form.submit();  // Submit the form if valid
+    } else {
+      document.getElementById('form-msg').innerHTML = '<div class="alert alert-danger">Please fill out all fields correctly.</div>';
+    }
+  });</script>
 </body>
 
 </html>
