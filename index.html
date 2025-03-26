@@ -73,12 +73,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li ><a class="text-primary active" href="index.html">Home<br></a></li>
-          <li ><a class="text-primary" href="about.html">About</a></li>
-          <li ><a class="text-primary" href="services.html">Services</a></li>
-          <li ><a class="text-primary" href="tourpackages.html">Tour Packages</a></li>
-          <li ><a class="text-primary" href="pricing.html">Tariff</a></li>
-          <li ><a class="text-primary" href="contact.html">Contact</a></li>
+          <li ><a class="text-white active" href="index.html">Home<br></a></li>
+          <li ><a class="text-white" href="about.html">About</a></li>
+          <li ><a class="text-white" href="services.html">Services</a></li>
+          <li ><a class="text-white" href="tourpackages.html">Tour Packages</a></li>
+          <li ><a class="text-white" href="pricing.html">Tariff</a></li>
+          <li ><a class="text-white" href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -102,9 +102,9 @@
             <p data-aos="fade-up" data-aos-delay="100" class="text-primary">Welcome to National Cabs – Your trusted partner for reliable and comfortable cab rentals in Madurai. Experience seamless travel with our well-maintained fleet and professional drivers. Book your ride today for local or outstation trips and enjoy the journey with us!</p>
 
           
-
+            <h2> <i class="fa fa-phone text-primary"></i> <a href="tel:+919944133888" class="text-primary"> 9944133888</a></h2>
           <h2> <i class="fa fa-phone text-primary"></i> <a href="tel:+919944133888" class="text-primary">9585233999</a></h2>
-          <h2> <i class="fa fa-phone text-primary"></i> <a href="tel:+919944133888" class="text-primary"> 9944133888</a></h2>
+        
 
           <a href="https://forms.gle/fTWsC3YpCidKYxFF6"><button class="btn btn-primary mt-4 w-fit"><b> Enquire Now </b></button></a>
 
@@ -112,95 +112,105 @@
 
           <div class="col-md-6">
             <form id="booking-form" class="bg-transparent" action="https://api.web3forms.com/submit" method="POST" novalidate>
-              <input type="hidden" name="access_key" value="1daf82e9-db2e-4a02-b44a-ac9c5702e58f" />
-              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-      
-              <!-- Name -->
-              <div class="mb-3">
-                <label for="name" class="form-label"><b>Your Name</b></label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
-                <div class="invalid-feedback">Please enter a valid name.</div>
-              </div>
-      
-              <!-- Pick-up and Drop Location -->
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="pickup" class="form-label"><b>Pick-up Location</b></label>
-                  <input type="text" id="pickup" name="pickup" class="form-control" placeholder="Pick-up Location" required>
-                  <div class="invalid-feedback">Please enter pick-up location.</div>
+                <input type="hidden" name="access_key" value="1daf82e9-db2e-4a02-b44a-ac9c5702e58f" />
+                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+        
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label"><b>Your Name</b></label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                    <div class="invalid-feedback">Please enter a valid name.</div>
                 </div>
-      
-                <div class="col-md-6 mb-3">
-                  <label for="drop" class="form-label"><b>Drop Location</b></label>
-                  <input type="text" id="drop" name="drop" class="form-control" placeholder="Drop Location" required>
-                  <div class="invalid-feedback">Please enter drop location.</div>
+        
+                <!-- Pick-up and Drop Location -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="pickup" class="form-label"><b>Pick-up Location</b></label>
+                        <input type="text" id="pickup" name="pickup" class="form-control" placeholder="Pick-up Location" required>
+                        <div class="invalid-feedback">Please enter pick-up location.</div>
+                    </div>
+        
+                    <div class="col-md-6 mb-3">
+                        <label for="drop" class="form-label"><b>Drop Location</b></label>
+                        <input type="text" id="drop" name="drop" class="form-control" placeholder="Drop Location" required>
+                        <div class="invalid-feedback">Please enter drop location.</div>
+                    </div>
                 </div>
-              </div>
-      
-              <!-- Mobile Number -->
-              <div class="mb-3">
-                <label for="mobile" class="form-label"><b>Mobile Number</b></label>
-                <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter your mobile number" required>
-                <div class="invalid-feedback">Please enter a valid mobile number.</div>
-              </div>
-      
-              <!-- Date and Time -->
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="date" class="form-label"><b>Date</b></label>
-                  <input type="date" id="date" name="date" class="form-control" required>
-                  <div class="invalid-feedback">Please select a date.</div>
+        
+                <!-- Mobile Number -->
+                <div class="mb-3">
+                    <label for="mobile" class="form-label"><b>Mobile Number</b></label>
+                    <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter your mobile number" required>
+                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
                 </div>
-      
-                <div class="col-md-6 mb-3">
-                  <label for="time" class="form-label"><b>Time</b></label>
-                  <input type="time" id="time" name="time" class="form-control" required>
-                  <div class="invalid-feedback">Please select a valid time.</div>
+        
+                <!-- Trip Type Select -->
+                <div class="mb-3">
+                    <label for="trip-type" class="form-label"><b>Trip Type</b></label>
+                    <select id="trip-type" name="trip_type" class="form-control" required>
+                        <option value="" disabled selected>Select Trip Type</option>
+                        <option value="one_way">One Way Trip</option>
+                        <option value="round_trip">Round Trip</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a trip type.</div>
                 </div>
-              </div>
-      
-              <!-- Submit Button -->
-              <div class="d-grid">
-                <button type="submit" class="btn btn-success">Book Now</button>
-              </div>
-              
-              <div id="form-msg" class="mt-3 text-center"></div>
+        
+                <!-- Date and Time -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="date" class="form-label"><b>Date</b></label>
+                        <input type="date" id="date" name="date" class="form-control" required>
+                        <div class="invalid-feedback">Please select a date.</div>
+                    </div>
+        
+                    <div class="col-md-6 mb-3">
+                        <label for="time" class="form-label"><b>Time</b></label>
+                        <input type="time" id="time" name="time" class="form-control" required>
+                        <div class="invalid-feedback">Please select a valid time.</div>
+                    </div>
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Book Now</button>
+                </div>
+        
+                <div id="form-msg" class="mt-3 text-center"></div>
             </form>
-
+        
             <div class="row">
-              <div class="col-lg-12 text-primary">
-                  <h2 class="text-primary mt-3">DROP TAXI & ONE WAY TAXI</h2>
-                  <table class="table table-bordered">
-                      <thead>
-                          <tr>
-                              <th>Vehicle</th>
-                              <th>Rate</th>
-                              <th>Driver Bata</th>
-                              <th>Additional Charges</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td>Sedan</td>
-                              <td>Rs.14/km</td>
-                              <td>Ra.400</td>
-                              <td>One Way Toll</td>
-                          </tr>
-                          <tr>
-                              <td>SUV</td>
-                              <td>Rs.19/km</td>
-                              <td>Rs.500</td>
-                              <td>One Way Toll</td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <p class="m-0 p-0"><strong>Minimum 130 Limit *</strong></p>
-                  <p class="m-0 p-0">Toll / Parking / Permit Extra</p>
-                  <p class="m-0 p-0">Only hill station road hills allowance extract</p>
-              </div>
-          </div>
-          
-          </div>
+                <div class="col-lg-12 text-primary">
+                    <h2 class="text-primary mt-3">DROP TAXI & ONE WAY TAXI</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Rate</th>
+                                <th>Driver Bata</th>
+                                <th>Additional Charges</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sedan</td>
+                                <td>Rs.14/km</td>
+                                <td>Rs.400</td>
+                                <td>One Way Toll</td>
+                            </tr>
+                            <tr>
+                                <td>SUV</td>
+                                <td>Rs.19/km</td>
+                                <td>Rs.500</td>
+                                <td>One Way Toll</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="m-0 p-0"><strong>Minimum 130 Limit *</strong></p>
+                    <p class="m-0 p-0">Toll / Parking / Permit Extra</p>
+                    <p class="m-0 p-0">Only hill station road hills allowance extract</p>
+                </div>
+            </div>
+        </div>
         </div>
         </div>
 
